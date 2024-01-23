@@ -1,10 +1,3 @@
-
-function App() {
-	return (
-		<div>
-			<p>Минимализм с Loft Space</p>
-		</div>
-	);
-}
-
-export default App;
+export const App = () => {
+	return <div className="app_light_theme"></div>;
+};

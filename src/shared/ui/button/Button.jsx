@@ -1,17 +1,24 @@
-import classNames from "classnames";
+import cls from "classnames";
 import styles from "./Button.module.sass";
-import PropTypes from "prop-types";
 
 /**
- * @param {text} text
- * @param {classNames} className
+ *
+ * @param {{
+ *  children: ReactElement,
+ *  className: string,
+ *  size: 's' | 'm',
+ *  variant: 'primary' | 'secondary'
+ * }} props
+ *
  */
 
-export const Button = ({ text, className }) => {
-	return <button className={classNames(styles.button, className)}>{text}</button>;
-};
+export const Button = ({ size = "m", variant = "primary", children, className }) => {
+	const sizeBtn = {
+		s: "size_s",
+		m: "size_m",
+	}[size];
 
-Button.propTypes = {
-	text: PropTypes.string,
-	className: PropTypes.string,
+	const additionalClass = [styles[sizeBtn], styles[variant], className];
+
+	return <button className={cls(styles.button, additionalClass)}>{children}</button>;
 };
