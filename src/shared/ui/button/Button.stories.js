@@ -12,13 +12,13 @@ export default {
 
 export const Primary = {
 	args: {
-		children: "Text",
+		children: "Кнопка",
 	},
 };
 
 export const Secondary = {
 	args: {
-		children: "Text",
+		children: "Кнопка",
 		variant: "secondary",
 	},
 };
@@ -26,13 +26,13 @@ export const Secondary = {
 export const Small = {
 	args: {
 		size: "s",
-		children: "Text",
+		children: "Кнопка",
 	},
 };
 
 export const Medium = {
 	args: {
 		size: "m",
-		children: "Text",
+		children: "Кнопка",
 	},
 };

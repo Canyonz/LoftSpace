@@ -1,0 +1,36 @@
+.appLink
+  font: var(--font-button)
+  color: var(--neutral100)
+  border: none
+  cursor: pointer
+
+  &.filled
+    background-color: var(--primary100)
+    &:hover
+      background-color: var(--primary200)
+
+  &.clear
+    position: relative
+    background: none
+    &.isArrow
+      display: flex
+      align-items: center
+      gap: 10px
+
+    &:hover
+      opacity: 60%
+
+  &.primary
+    color: var(--primary100)
+
+  &.secondary
+    color: var(--neutral500)
+
+  &.neutral
+    color: var(--neutral100)
+
+  &.size_s
+    padding: 10px 25px
+
+  &.size_m
+    padding: 18px 50px

@@ -1,0 +1,49 @@
+import { AppLink } from "./AppLink";
+import "@/app/styles/index.sass";
+
+export default {
+	title: "shared/AppLink",
+	component: AppLink,
+	args: {
+		className: "app_light_theme",
+	},
+	tags: ["autodocs"],
+};
+
+export const FilledS = {
+	args: {
+		children: "Ссылка",
+		variant: "filled",
+		size: "s",
+	},
+};
+
+export const FilledM = {
+	args: {
+		children: "Ссылка",
+		variant: "filled",
+		size: "m",
+	},
+};
+
+export const Clear = {
+	args: {
+		children: "Ссылка",
+	},
+};
+
+export const ClearPrimaryArrow = {
+	args: {
+		children: "Ссылка",
+		color: "primary",
+		isArrow: true,
+	},
+};
+
+export const ClearNeutralArrow = {
+	args: {
+		children: "Ссылка",
+		color: "neutral",
+		isArrow: true,
+	},
+};

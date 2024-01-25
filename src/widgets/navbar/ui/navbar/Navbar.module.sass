@@ -1,0 +1,24 @@
+.header
+  z-index: var(--header-z-index)
+
+  &.primary
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    background-color: transparent
+
+  &.secondary
+    background-color: var(--bg200)
+
+  .navbar
+    display: flex
+    align-items: center
+    margin: auto
+    padding: 30px 0
+    max-width: var(--content-max-width)
+
+  .items
+    display: flex
+    gap: 50px
+    margin-left: auto
