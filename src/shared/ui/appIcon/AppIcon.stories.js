@@ -3,14 +3,10 @@ import MapMarkerSVG from "../../assets/icon/map-marker.svg";
 import VKSVG from "../../assets/icon/vk.svg";
 import LeafSVG from "../../assets/icon/leaf.svg";
 import ArrowSVG from "../../assets/icon/arrow.svg";
-import "@/app/styles/index.sass";
 
 export default {
 	title: "shared/AppIcon",
 	component: AppIcon,
-	args: {
-		className: "app_light_theme",
-	},
 	tags: ["autodocs"],
 };
 

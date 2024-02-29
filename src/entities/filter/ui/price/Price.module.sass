@@ -1,0 +1,35 @@
+
+.number
+  display: flex
+  gap: 40px
+
+  input
+    width: 100%
+    font: var(--font-text)
+    padding: 5px 10px
+    color: var(--neutral500)
+    background-color: var(--neutral100)
+    border: 1px solid var(--primary100)
+
+    &::placeholder
+      color: var(--neutral300)
+
+    &:focus
+      outline: 1px solid var(--neutral500)
+
+.priceBetween
+  position: relative
+  background-color: var(--neutral500)
+  height: 1px
+  margin-top: 15px
+
+  .circle
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    border: 1px solid var(--neutral500)
+    border-radius: 50%
+    background-color: var(--primary100)
+    height: 20px
+    width: 20px
+    cursor: pointer

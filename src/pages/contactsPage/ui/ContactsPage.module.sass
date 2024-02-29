@@ -1,0 +1,73 @@
+.contactPage
+  color: var(--neutral500)
+  height: 100%
+
+  .section1
+    max-width: var(--content-max-width)
+    margin: 70px auto 100px
+
+    .sectionTitle
+      margin-bottom: 30px
+
+    .contact
+      padding: 20px 35px
+      background-color: var(--bg100)
+
+      &:not(:last-child)
+        margin-bottom: 20px
+
+      .textWrapper
+        max-width: 220px
+
+        .contactTitle
+          margin-bottom: 10px
+
+        .text
+          white-space: pre-wrap
+
+      .details
+        display: grid
+        grid-template-columns: repeat(4,minmax(min-content, 1fr))
+        align-items: center
+        gap: 70px
+
+  .section2
+    width: var(--content-max-width)
+    margin: 100px auto
+
+    .sectionTitle
+      margin-bottom: 30px
+
+    .requisite
+      background-color: var(--bg100)
+      padding: 20px 35px
+
+  .section3
+    max-width: var(--content-max-width)
+    margin: 100px auto 55px
+    .sectionTitle
+      margin-bottom: 30px
+
+    .iframe
+      overflow: hidden
+
+  .section4
+    padding: 45px 0 95px
+    background-color: var(--bg100)
+
+    .container
+      max-width: var(--content-max-width)
+      margin: 0 auto
+
+      .sectionTitle
+        margin-bottom: 20px
+
+      .form
+        // display: flex
+        // justify-content: space-between
+        // align-items: center
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        // height: max-content
+        margin-top: 32px

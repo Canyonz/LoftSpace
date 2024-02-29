@@ -1,0 +1,18 @@
+.sliderWrapper
+  overflow-x: hidden
+
+  .slider
+    display: flex
+    justify-content: start
+    width: 100%
+    cursor: grab
+
+    &:active
+      cursor: grabbing
+
+    &.reverse
+      justify-content: end
+
+    .img
+      // flex: 1 0 60%
+      min-width: 60%

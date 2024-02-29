@@ -1,0 +1,24 @@
+.inputWrapper
+  display: flex
+  align-items: center
+  gap: 20px
+  border: 1px solid var(--neutral200)
+
+  &.size_s
+    padding: 5px 10px
+
+  &.size_m
+    padding: 10px 15px
+
+  &.focused
+    border: 1px solid var(--neutral500)
+
+  .input
+    width: 100%
+    font: var(--font-text)
+    background: none
+    border: none
+    outline: none
+
+    &::placeholder
+      color: var(--neutral300)

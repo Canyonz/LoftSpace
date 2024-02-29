@@ -1,0 +1,19 @@
+.confirmation
+  display: flex
+  flex-direction: column
+  gap: 15px
+  padding: 15px 20px
+  background-color: var(--primary100)
+  border: 2px solid var(--primary200)
+  border-radius: 15px
+  transform: translateX(100%)
+  transition: transform 0.25s ease-out
+
+  &.opened
+    transform: translateX(0)
+
+  .text
+    display: flex
+    flex-direction: column
+    gap: 5px
+    font-size: 20px

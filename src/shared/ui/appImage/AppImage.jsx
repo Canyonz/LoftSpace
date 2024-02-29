@@ -6,7 +6,9 @@ import { useLayoutEffect, useState } from "react";
  *
  * @param {{
  * 	src: string,
+ * 	maxHeight: boolean,
  *  alt: string,
+ * 	signature: string,
  * 	fallback: ReactElement,
  * 	errorFallback: ReactElement,
  * 	className: string
@@ -14,7 +16,7 @@ import { useLayoutEffect, useState } from "react";
  *
  */
 
-export const AppImage = ({ src, alt = "image", fallback, errorFallback = fallback, className }) => {
+export const AppImage = ({ src, maxHeight, alt = "image", signature, fallback, errorFallback = fallback, className }) => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [hasError, setHasError] = useState(false);
 
@@ -41,5 +43,21 @@ export const AppImage = ({ src, alt = "image", fallback, errorFallback = fallbac
 		return errorFallback;
 	}
 
-	return <img src={src} alt={alt} className={cls(styles.appImage, className)} />;
+	if (signature) {
+		return (
+			<div className={cls(styles.imgWrapper, className)}>
+				<img
+					src={src}
+					alt={alt}
+					className={cls(styles.appImage, { [styles.maxHeight]: maxHeight })}
+					draggable="false"
+				/>
+				<span className={styles.signature}>{signature}</span>
+			</div>
+		);
+	}
+
+	return (
+		<img src={src} alt={alt} className={cls(styles.appImage, { [styles.maxHeight]: maxHeight }, className)} draggable="false" />
+	);
 };

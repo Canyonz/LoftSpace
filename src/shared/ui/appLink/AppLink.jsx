@@ -1,6 +1,7 @@
 import cls from "classnames";
 import styles from "./AppLink.module.sass";
 import ArrowLinkSVG from "../../assets/icon/arrowLink.svg";
+import { Link } from "react-router-dom";
 
 /**
  *
@@ -25,9 +26,9 @@ export const AppLink = ({ children, href = "#", variant = "clear", color = "neut
 	const additionalClass = [styles[variant], styles[color], styles[sizeLink], className];
 
 	return (
-		<a href={href} className={cls(styles.appLink, { [styles.isArrow]: isArrow }, additionalClass)}>
+		<Link to={href} className={cls(styles.appLink, { [styles.isArrow]: isArrow }, additionalClass)}>
 			{children}
 			{isArrow && <ArrowLinkSVG />}
-		</a>
+		</Link>
 	);
 };

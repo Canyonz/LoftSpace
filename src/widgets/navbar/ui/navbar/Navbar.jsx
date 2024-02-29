@@ -1,7 +1,8 @@
 import { AppLogo } from "@/shared/ui/appLogo/AppLogo";
-import styles from "./Navbar.module.sass";
-import cls from "classnames";
 import { AppLink } from "@/shared/ui/appLink/AppLink";
+import { useStylesNavbar } from "@/shared/lib/hooks/useStylesNavbar";
+import cls from "classnames";
+import styles from "./Navbar.module.sass";
 
 const navItem = [
 	{
@@ -18,18 +19,11 @@ const navItem = [
 	},
 ];
 
-/**
- *
- * @param {{
- *  variant: 'primary' | 'secondary',
- *  className: string
- * }} props
- *
- */
+export const Navbar = () => {
+	const { variant } = useStylesNavbar();
 
-export const Navbar = ({ variant = "primary", className }) => {
 	return (
-		<header className={cls(styles.header, styles[variant], className)}>
+		<header className={cls(styles.header, styles[variant])}>
 			<div className={cls(styles.navbar)}>
 				<AppLogo color={variant === "secondary" ? "neutral" : "primary"} />
 				<div className={styles.items}>

@@ -4,25 +4,31 @@ import cls from "classnames";
 /**
  *
  * @param {{
- *  Svg: string,
- *  size: '18' | '24' | '44',
+ *  Svg: ReactNode,
+ *  size: 's' | 'm' | 'l',
  * 	color: 'primary'| 'secondary' | 'neutral',
  *  clickable: boolean,
- *  onClick: void,
+ *  onClick: () => void,
  *  className: string
  * }} props
  *
  */
 
-export const AppIcon = ({ Svg, size = "18", color = "neutral", clickable, onClick, className }) => {
+export const AppIcon = ({ Svg, size = "s", color = "neutral", clickable, onClick, className }) => {
+	const sizeIcon = {
+		s: "size_s",
+		m: "size_m",
+		l: "size_l",
+	}[size];
+
 	const additionalClass = [styles.appIcon, styles[color], className];
 	const svgClass = clickable ?? additionalClass;
 
-	const icon = <Svg height={size} width={size} className={cls(svgClass)} />;
+	const icon = <Svg className={cls(svgClass, styles[sizeIcon])} />;
 
 	if (clickable) {
 		return (
-			<button height={size} width={size} className={cls(additionalClass, { [styles.clickable]: clickable })} onClick={onClick}>
+			<button className={cls(styles[sizeIcon], { [styles.clickable]: clickable }, additionalClass)} onClick={onClick}>
 				{icon}
 			</button>
 		);

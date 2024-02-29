@@ -1,12 +1,8 @@
 import { AppLink } from "./AppLink";
-import "@/app/styles/index.sass";
 
 export default {
 	title: "shared/AppLink",
 	component: AppLink,
-	args: {
-		className: "app_light_theme",
-	},
 	tags: ["autodocs"],
 };
 

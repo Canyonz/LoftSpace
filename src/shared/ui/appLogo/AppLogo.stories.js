@@ -1,12 +1,8 @@
 import { AppLogo } from "./AppLogo";
-import "@/app/styles/index.sass";
 
 export default {
 	title: "shared/AppLogo",
 	component: AppLogo,
-	args: {
-		className: "app_light_theme",
-	},
 	tags: ["autodocs"],
 };
 

@@ -1,0 +1,31 @@
+.label
+  display: flex
+  gap: 10px
+  font: var(--font-signature)
+  cursor: pointer
+
+  .checkbox
+    display: block
+    position: relative
+    height: 16px
+    min-width: 16px
+    appearance: none
+    margin-top: 5px
+    border: 1px solid var(--neutral500)
+    cursor: pointer
+
+    &:checked
+      background-color: var(--primary100)
+      border: 1px solid var(--primary100)
+
+      &::before
+        content: '\2714'
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        font-size: 12px
+        color: #fff
+
+    &:hover
+      border: 1px solid var(--primary100)
