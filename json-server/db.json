@@ -8,8 +8,10 @@
 			"type": "Кривая",
 			"color": "Черный",
 			"img": "/catalog/product.jpg",
+			"img_popular": "/catalog/popular/product.jpg",
 			"name": "Диван Loft",
 			"price": 550000,
+			"views": 100,
 			"in_stock": true
 		},
 		{
@@ -20,8 +22,10 @@
 			"type": "Изогнутая",
 			"color": "Красный",
 			"img": "/catalog/product-1.jpg",
+			"img_popular": "/catalog/popular/product-1.jpg",
 			"name": "Кресло Loft",
 			"price": 20000,
+			"views": 50,
 			"in_stock": true
 		},
 		{
@@ -32,8 +36,10 @@
 			"type": "Круглая",
 			"color": "Белый",
 			"img": "/catalog/product-2.jpg",
+			"img_popular": "/catalog/popular/product-2.jpg",
 			"name": "Стул Loft",
 			"price": 10000,
+			"views": 30,
 			"in_stock": true
 		},
 		{
@@ -44,8 +50,10 @@
 			"type": "Круглая",
 			"color": "Белый",
 			"img": "/catalog/product-2.jpg",
+			"img_popular": "/catalog/popular/product-3.jpg",
 			"name": "Стул Loft",
 			"price": 10000,
+			"views": 10,
 			"in_stock": true
 		},
 		{
@@ -58,6 +66,7 @@
 			"img": "/catalog/product-2.jpg",
 			"name": "Стул Loft",
 			"price": 10000,
+			"views": 1,
 			"in_stock": true
 		},
 		{
@@ -70,6 +79,7 @@
 			"img": "/catalog/product-2.jpg",
 			"name": "Стул Loft",
 			"price": 10000,
+			"views": 1,
 			"in_stock": true
 		},
 		{
@@ -82,6 +92,7 @@
 			"img": "/catalog/product-2.jpg",
 			"name": "Стул Loft",
 			"price": 10000,
+			"views": 1,
 			"in_stock": true
 		},
 		{
@@ -94,6 +105,7 @@
 			"img": "/catalog/product-2.jpg",
 			"name": "Стул Loft",
 			"price": 10000,
+			"views": 1,
 			"in_stock": true
 		},
 		{
@@ -106,6 +118,7 @@
 			"img": "/catalog/product-2.jpg",
 			"name": "Стул Loft",
 			"price": 10000,
+			"views": 1,
 			"in_stock": true
 		},
 		{
@@ -118,6 +131,7 @@
 			"img": "/catalog/product-2.jpg",
 			"name": "Стул Loft",
 			"price": 10000,
+			"views": 1,
 			"in_stock": true
 		},
 		{
@@ -130,6 +144,7 @@
 			"img": "/catalog/product-2.jpg",
 			"name": "Стул Loft",
 			"price": 10000,
+			"views": 1,
 			"in_stock": true
 		}
 	]

@@ -1,21 +1,22 @@
 import { AppLogo } from "@/shared/ui/appLogo/AppLogo";
 import { AppLink } from "@/shared/ui/appLink/AppLink";
 import { useStylesNavbar } from "@/shared/lib/hooks/useStylesNavbar";
+import { getRouteAbout, getRouteCatalog, getRouteMain } from "@/shared/const/router";
 import cls from "classnames";
 import styles from "./Navbar.module.sass";
 
 const navItem = [
 	{
 		text: "Главная",
-		path: "/",
+		path: getRouteMain(),
 	},
 	{
 		text: "Каталог",
-		path: "/catalog",
+		path: getRouteCatalog(),
 	},
 	{
 		text: "О нас",
-		path: "/about",
+		path: getRouteAbout(),
 	},
 ];
 

@@ -1,4 +1,4 @@
-import styles from "./Check.module.sass";
+import styles from "./CheckBox.module.sass";
 import cls from "classnames";
 
 /**
@@ -12,7 +12,7 @@ import cls from "classnames";
  *
  */
 
-export const Check = ({ checked, label, onChange, className }) => {
+export const CheckBox = ({ checked, label, onChange, className }) => {
 	return (
 		<label className={cls(styles.label, className)}>
 			<input type="checkbox" checked={checked} onChange={onChange} className={styles.checkbox} />

@@ -1,0 +1,32 @@
+.article
+  padding: 100px 0
+  background-color: var(--bg100)
+  color: var(--neutral500)
+
+  .contentWrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 120px
+    max-width: var(--content-max-width)
+    margin: 0 auto
+
+    .content
+      max-width: 560px
+      .title
+        margin-bottom: 30px
+        max-width: 480px
+
+      .text
+        margin-bottom: 20px
+
+      .list
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+        .item
+          list-style-type: disc
+          margin-left: 22px
+          &::marker
+            background-color: var(--neutral500)

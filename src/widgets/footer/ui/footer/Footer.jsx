@@ -7,53 +7,116 @@ import OKSVG from "@/shared/assets/icon/ok.svg";
 import TGSVG from "@/shared/assets/icon/telegram.svg";
 import WAPPSVG from "@/shared/assets/icon/whatsapp.svg";
 import { ApplicationForm } from "@/features/applicationForm/index";
+import { AppLink } from "@/shared/ui/appLink/AppLink";
+import { getRouteAbout } from "@/shared/const/router";
+
+const contacts = [
+	{
+		title: "Воронеж - офис продаж",
+		value: "+7 (473) 212-09-98",
+		link: "tel:+7 (473) 212-09-98",
+	},
+	{
+		title: "Call - центр",
+		value: "+7 (812) 380-09-98",
+		link: "tel:+7 (812) 380-09-98",
+	},
+	{
+		title: "Напишите нам",
+		value: "info@loft.ru",
+		link: "https://info@loft.ru",
+	},
+];
+
+const info = [
+	{
+		value: "О магазине",
+		link: getRouteAbout(),
+	},
+	{
+		value: "Доставка и оплата",
+		link: getRouteAbout(),
+	},
+	{
+		value: "Гарантии",
+		link: getRouteAbout(),
+	},
+	{
+		value: "Сотрудничество",
+		link: getRouteAbout(),
+	},
+];
+
+const socials = [
+	{
+		img: VKSVG,
+		link: "https://vk.com/",
+	},
+	{
+		img: WAPPSVG,
+		link: "https://www.whatsapp.com/",
+	},
+	{
+		img: TGSVG,
+		link: "tg://resolve?domain=canyon51",
+	},
+	{
+		img: OKSVG,
+		link: "https://ok.ru/",
+	},
+];
+
+const WrapperSection = ({ title, children }) => {
+	return (
+		<section className={cls(styles.section, styles.contacts)}>
+			<h3 className={styles.title}>{title}</h3>
+			<ul className={styles.list}>{children}</ul>
+		</section>
+	);
+};
 
 export const Footer = () => {
-	const onClickLinks = (e) => {
-		e.preventDefault();
-	};
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.wrapper}>
 				<div className={styles.sectionsWrapper}>
-					<section className={cls(styles.section, styles.contacts)}>
-						<h3 className={styles.title}>Контакты</h3>
-						<ul className={styles.list}>
-							<li>
-								<span className={styles.itemTitle}>Воронеж - офис продаж</span>
-								<span>+7 (473)212-09-98</span>
+					<WrapperSection title={"Контакты"}>
+						{contacts.map((contact, index) => (
+							<li key={index}>
+								<span className={styles.itemTitle}>{contact.title}</span>
+								<AppLink href={contact.link} size="m">
+									{contact.value}
+								</AppLink>
 							</li>
-							<li>
-								<span className={styles.itemTitle}>Call - центр</span>
-								<span>+7 (812)380-09-98</span>
+						))}
+					</WrapperSection>
+
+					<WrapperSection title={"Информация"}>
+						{info.map((inf, index) => (
+							<li key={index}>
+								<AppLink href={inf.link} size="m">
+									{inf.value}
+								</AppLink>
 							</li>
-							<li>
-								<span className={styles.itemTitle}>Напишите нам</span>
-								<span>info@loft.ru</span>
-							</li>
-						</ul>
-					</section>
-					<section className={cls(styles.section, styles.info)}>
-						<h3 className={styles.title}>Информация</h3>
-						<ul className={styles.list}>
-							<li>О магазине</li>
-							<li>Доставка и оплата</li>
-							<li>Гарантии</li>
-							<li>Сотрудничество</li>
-						</ul>
-					</section>
+						))}
+					</WrapperSection>
+
 					<section className={cls(styles.section, styles.newsletter)}>
 						<ApplicationForm secondary />
 					</section>
 				</div>
+
 				<div className={styles.footerDown}>
 					<AppLogo />
-					<div className={styles.links}>
-						<AppIcon Svg={VKSVG} size="m" clickable onClick={onClickLinks} />
-						<AppIcon Svg={WAPPSVG} size="m" clickable onClick={onClickLinks} />
-						<AppIcon Svg={TGSVG} size="m" clickable onClick={onClickLinks} />
-						<AppIcon Svg={OKSVG} size="m" clickable onClick={onClickLinks} />
-					</div>
+					<ul className={styles.links}>
+						{socials.map((social, index) => (
+							<li key={index}>
+								<AppLink href={social.link}>
+									<AppIcon Svg={social.img} size="m" />
+								</AppLink>
+							</li>
+						))}
+					</ul>
 				</div>
 			</div>
 		</footer>

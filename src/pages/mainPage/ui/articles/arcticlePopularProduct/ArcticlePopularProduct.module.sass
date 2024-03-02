@@ -1,0 +1,23 @@
+.article
+  padding: 100px 0
+  background-color: var(--bg100)
+
+  .contentWrapper
+    display: flex
+    flex-direction: column
+    gap: 30px
+    max-width: var(--content-max-width)
+    margin: 0 auto
+
+    .header
+      display: flex
+      justify-content: space-between
+
+      .headerText
+        color: var(--neutral500)
+
+    .productsWrapper
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: 20px
+      flex-wrap: wrap

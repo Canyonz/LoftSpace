@@ -1,14 +1,15 @@
 import { Button } from "@/shared/ui/button/Button";
 import { Input } from "@/shared/ui/input/Input";
 import { AppIcon } from "@/shared/ui/appIcon/AppIcon";
-import styles from "./CatalogPage.module.sass";
-import SearchSVG from "@/shared/assets/icon/search.svg";
 import { Listbox } from "@/shared/ui/listbox/Listbox";
 import { ProductCard } from "@/entities/productCard/ProductCard";
-import ArrowLinkSVG from "@/shared/assets/icon/arrowLink.svg";
 import { useMemo, useState } from "react";
 import { useGetCatalog } from "@/features/catalog/api/useGetCatalog";
 import { Filter } from "@/features/filter";
+import ArrowLinkSVG from "@/shared/assets/icon/arrowLink.svg";
+import SearchSVG from "@/shared/assets/icon/search.svg";
+import styles from "./CatalogPage.module.sass";
+import { Page } from "@/widgets/page/Page";
 
 const sortItems = [
 	{
@@ -32,16 +33,17 @@ export const CatalogPage = () => {
 	const [page, setPage] = useState(1);
 	const [limit, setLimit] = useState(6);
 
-	const filteries = useMemo(() => {
-		return {
+	const filteries = useMemo(
+		() => ({
 			_page: page,
 			_limit: limit,
 			_sort: sort.value,
 			_order: sort.order,
 			...filters,
 			q: search,
-		};
-	}, [filters, limit, page, search, sort.order, sort.value]);
+		}),
+		[filters, limit, page, search, sort.order, sort.value]
+	);
 
 	const { products, isLoading, error } = useGetCatalog(filteries);
 
@@ -86,7 +88,7 @@ export const CatalogPage = () => {
 	};
 
 	return (
-		<main className={styles.catalogPage}>
+		<Page className={styles.catalogPage}>
 			<div className={styles.catalogWrapper}>
 				<Filter onClickApply={onChangeFilers} onClickReset={onResetFilers} />
 				<div className={styles.container}>
@@ -128,6 +130,6 @@ export const CatalogPage = () => {
 					</div>
 				</div>
 			</div>
-		</main>
+		</Page>
 	);
 };

@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { Button } from "@/shared/ui/button/Button";
-import { Check } from "@/shared/ui/check/Check";
+import { CheckBox } from "@/shared/ui/checkbox/CheckBox";
 import { Confirmation } from "@/entities/confirmation/Confirmation";
 import styles from "./ApplicationForm.module.sass";
 import { InputForm } from "@/shared/ui/inputForm/InputForm";
@@ -56,7 +56,12 @@ const Form = ({ secondary, onSubmit }) => {
 				<InputForm type="tel" placeholder="+7 (___)___-__-__" value={tel} required setValue={setTel} />
 				<InputForm type="email" placeholder="Введите e-mail" value={email} required setValue={setEmail} />
 			</div>
-			<Check checked={checked} label="Согласен с условиями использования моих пресональных данных" onChange={onChangeChecked} />
+			<CheckBox
+				checked={checked}
+				label="Согласен с условиями использования моих пресональных данных"
+				onChange={onChangeChecked}
+				className={styles.checkbox}
+			/>
 			<Button type="submit" maxWidth isDisabled={!checked}>
 				Отправить
 			</Button>

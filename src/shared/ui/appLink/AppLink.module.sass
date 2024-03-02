@@ -1,5 +1,4 @@
 .appLink
-  font: var(--font-button)
   color: var(--neutral100)
   border: none
   cursor: pointer
@@ -7,12 +6,14 @@
   &.filled
     padding: 18px 50px
     background-color: var(--primary100)
+    transition: background-color 0.15s
     &:hover
       background-color: var(--primary200)
 
   &.clear
     position: relative
     background: none
+    transition: opacity 0.25s
     &.isArrow
       display: flex
       align-items: center
@@ -29,3 +30,9 @@
 
   &.neutral
     color: var(--neutral100)
+
+  &.size_s
+    font: var(--font-button)
+
+  &.size_m
+    font: var(--font-text)

@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
  *
  */
 
-export const AppLink = ({ children, href = "#", variant = "clear", color = "neutral", size, isArrow, className }) => {
+export const AppLink = ({ children, href = "#", variant = "clear", color = "neutral", size = "s", isArrow, className }) => {
 	const sizeLink = {
 		s: "size_s",
 		m: "size_m",

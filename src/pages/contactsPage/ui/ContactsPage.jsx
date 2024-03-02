@@ -3,10 +3,11 @@ import { ApplicationForm } from "@/features/applicationForm/index";
 import { AppImage } from "@/shared/ui/appImage/AppImage";
 import { Maps } from "@/shared/ui/map/Maps";
 import styles from "./ContactsPage.module.sass";
+import { Page } from "@/widgets/page/Page";
 
 export const ContactsPage = () => {
 	return (
-		<main className={styles.contactPage}>
+		<Page className={styles.contactPage}>
 			<section className={styles.section1}>
 				<h2 className={styles.sectionTitle}>Контактная информация</h2>
 				{contactsInfo.map((contact) => (
@@ -51,6 +52,6 @@ export const ContactsPage = () => {
 					</div>
 				</div>
 			</section>
-		</main>
+		</Page>
 	);
 };
