@@ -2,7 +2,7 @@ import { AppLink } from "@/shared/ui/appLink/AppLink";
 import styles from "./ArcticlePopularProduct.module.sass";
 import { ProductCard } from "@/entities/productCard/ProductCard";
 import { useMemo } from "react";
-import { useGetCatalog } from "@/features/catalog/api/useGetCatalog";
+import { useGetCatalog } from "@/shared/lib/hooks/useGetCatalog";
 import { getRouteCatalog } from "@/shared/const/router";
 
 const recommendationsCount = 4;

@@ -1,8 +1,8 @@
-import { MultipleSelection, Price } from "@/entities/filter";
-import styles from "./Filter.module.sass";
 import { useEffect, useState } from "react";
 import { Button } from "@/shared/ui/button/Button";
-import { useGetCatalog } from "@/features/catalog/api/useGetCatalog";
+import { MultipleSelection, Price } from "@/entities/filter";
+import { useGetCatalog } from "@/shared/lib/hooks/useGetCatalog";
+import styles from "./Filter.module.sass";
 
 export const Filter = ({ onClickApply, onClickReset }) => {
 	const { products } = useGetCatalog();

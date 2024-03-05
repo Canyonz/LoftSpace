@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FilterTrigger } from "@/shared/ui/filterTrigger/FilterTrigger";
+import { Trigger } from "@/entities/filter/ui/trigger/Trigger";
 import cls from "classnames";
 import styles from "./LayoutFilter.module.sass";
 
@@ -12,7 +12,7 @@ export const LayoutFilter = ({ title, children, opened = false, className }) => 
 
 	return (
 		<div className={cls(styles.checkboxWrapper, className)}>
-			<FilterTrigger title={title} onOpen={onOpen} isOpen={isOpen} className={styles.trigger}/>
+			<Trigger title={title} onOpen={onOpen} isOpen={isOpen} className={styles.trigger}/>
 
 			{isOpen && children}
 		</div>

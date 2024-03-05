@@ -1,0 +1,34 @@
+.pagination
+  margin-top: 50px
+
+  .paginationPage
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 20px
+    margin-top: 20px
+
+    .btnBackPage,
+    .btnForwardPage
+      padding: 5px
+      width: 30px
+      height: 30px
+      border: 1px solid var(--neutral500)
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      svg
+        width: 12px
+        height: 12px
+
+    .btnBackPage
+      transform: rotateZ(180deg)
+
+    .pageNumber
+      font: var(--font-text)
+      background: none
+      border: none
+      cursor: pointer
+
+    .btnForwardPage

@@ -1,6 +1,6 @@
-import cls from "classnames";
-import styles from "./Input.module.sass";
 import { useState } from "react";
+import cls from "classnames";
+import styles from "./SearchInput.module.sass";
 
 /**
  *
@@ -16,7 +16,7 @@ import { useState } from "react";
  *
  */
 
-export const Input = ({ type = "text", size = "s", placeholder, value, addonRight, onChange, className }) => {
+export const SearchInput = ({ type = "text", size = "s", placeholder, value, addonRight, onChange, className }) => {
 	const [isFocused, setIsFocused] = useState(false);
 
 	const onFocus = () => {

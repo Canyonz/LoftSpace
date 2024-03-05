@@ -1,15 +1,15 @@
-import { Button } from "@/shared/ui/button/Button";
-import { Input } from "@/shared/ui/input/Input";
+import { useMemo, useState } from "react";
 import { AppIcon } from "@/shared/ui/appIcon/AppIcon";
 import { Listbox } from "@/shared/ui/listbox/Listbox";
+import { ProductNotFound } from "@/entities/productNotFound";
 import { ProductCard } from "@/entities/productCard/ProductCard";
-import { useMemo, useState } from "react";
-import { useGetCatalog } from "@/features/catalog/api/useGetCatalog";
+import { SearchInput } from "@/entities/filter";
 import { Filter } from "@/features/filter";
-import ArrowLinkSVG from "@/shared/assets/icon/arrowLink.svg";
-import SearchSVG from "@/shared/assets/icon/search.svg";
-import styles from "./CatalogPage.module.sass";
 import { Page } from "@/widgets/page/Page";
+import { useGetCatalog } from "@/shared/lib/hooks/useGetCatalog";
+import styles from "./CatalogPage.module.sass";
+import SearchSVG from "@/shared/assets/icon/search.svg";
+import { Pagination } from "@/features/pagination/ui/Pagination";
 
 const sortItems = [
 	{
@@ -87,14 +87,24 @@ export const CatalogPage = () => {
 		if (hasMore) setLimit((prev) => prev + 6);
 	};
 
+	const productsContainer = products.length ? (
+		<div className={styles.cardsWrapper}>
+			{products.map((product) => (
+				<ProductCard key={product.id} item={product} />
+			))}
+		</div>
+	) : (
+		<ProductNotFound className={styles.productNotFound} />
+	);
+
 	return (
 		<Page className={styles.catalogPage}>
 			<div className={styles.catalogWrapper}>
 				<Filter onClickApply={onChangeFilers} onClickReset={onResetFilers} />
 				<div className={styles.container}>
-					<div className={styles.header}>
+					<div className={styles.top}>
 						<Listbox items={sortItems} className={styles.sort} value={sort} onClick={onSelectListBox} />
-						<Input
+						<SearchInput
 							placeholder="Поиск"
 							size="m"
 							addonRight={<AppIcon Svg={SearchSVG} color="secondary" clickable />}
@@ -103,31 +113,14 @@ export const CatalogPage = () => {
 							onChange={onChangeSearch}
 						/>
 					</div>
-					<div className={styles.cardsWrapper}>
-						{products.map((product) => (
-							<ProductCard key={product.id} item={product} />
-						))}
-					</div>
-					<div className={styles.footer}>
-						<Button variant="secondary" isBorder maxWidth size="s" onClick={onChangeLimit}>
-							Показать еще
-						</Button>
-						<div className={styles.paginationPage}>
-							<AppIcon Svg={ArrowLinkSVG} clickable color="secondary" className={styles.btnBackPage} onClick={onChangeDownPage} />
-							{[...Array(3)].map((_, index) => (
-								<button key={index} className={styles.pageNumber} onClick={onChangePage(index + 1)}>
-									{index + 1}
-								</button>
-							))}
-							<AppIcon
-								Svg={ArrowLinkSVG}
-								clickable
-								color="secondary"
-								className={styles.btnForwardPage}
-								onClick={onChangeUpPage}
-							/>
-						</div>
-					</div>
+					{productsContainer}
+					<Pagination
+						limit={limit}
+						onChangeDownPage={onChangeDownPage}
+						onChangeLimit={onChangeLimit}
+						onChangePage={onChangePage}
+						onChangeUpPage={onChangeUpPage}
+					/>
 				</div>
 			</div>
 		</Page>
