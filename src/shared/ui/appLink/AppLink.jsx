@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import cls from "classnames";
 import styles from "./AppLink.module.sass";
 import ArrowLinkSVG from "../../assets/icon/arrowLink.svg";
-import { Link } from "react-router-dom";
 
 /**
  *

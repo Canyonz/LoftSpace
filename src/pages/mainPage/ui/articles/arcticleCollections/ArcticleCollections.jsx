@@ -6,17 +6,17 @@ import { getRouteCatalog } from "@/shared/const/router";
 const collections = [
 	{
 		link: getRouteCatalog(),
-		img: "/main/collection.jpg",
+		img: "./main/collection.jpg",
 		signature: "Loft Minimal",
 	},
 	{
 		link: getRouteCatalog(),
-		img: "/main/collection1.jpg",
+		img: "./main/collection1.jpg",
 		signature: "Loft Grace",
 	},
 	{
 		link: getRouteCatalog(),
-		img: "/main/collection2.jpg",
+		img: "./main/collection2.jpg",
 		signature: "Loft Elite",
 	},
 ];

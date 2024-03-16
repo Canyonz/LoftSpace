@@ -11,6 +11,7 @@ export const FilledS = {
 		children: "Ссылка",
 		variant: "filled",
 		size: "s",
+		href: "#",
 	},
 };
 

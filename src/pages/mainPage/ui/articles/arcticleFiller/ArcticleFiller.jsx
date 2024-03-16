@@ -9,7 +9,7 @@ const listItems = [
 export const ArcticleFiller = () => {
 	return (
 		<article className={styles.article}>
-			<AppImage src="/main/anatomy.png" maxHeight />
+			<AppImage src="./main/anatomy.png" maxHeight />
 			<div className={styles.contentWrapper}>
 				<div className={styles.content}>
 					<h2 className={styles.title}>Анатомический наполнитель из экологичных материалов</h2>

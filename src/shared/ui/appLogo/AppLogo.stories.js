@@ -8,14 +8,12 @@ export default {
 
 export const LogoPrimary = {
 	args: {
-		height: 27,
-		width: 125,
+		height: 54,
+		width: 250,
 	},
 };
 export const LogoSecondary = {
 	args: {
 		color: "neutral",
-		height: 27,
-		width: 125,
 	},
 };

@@ -3,32 +3,40 @@ import { Button } from "./Button";
 export default {
 	title: "shared/Button",
 	component: Button,
+	args: {
+		children: "Кнопка",
+	},
 	tags: ["autodocs"],
 };
 
 export const Primary = {
 	args: {
-		children: "Кнопка",
+		maxWidth: true,
+		isDisabled: true,
 	},
 };
 
 export const Secondary = {
 	args: {
-		children: "Кнопка",
 		variant: "secondary",
+		isBorder: true,
 	},
 };
 
 export const Small = {
 	args: {
 		size: "s",
-		children: "Кнопка",
 	},
 };
 
 export const Medium = {
 	args: {
 		size: "m",
-		children: "Кнопка",
+	},
+};
+
+export const Large = {
+	args: {
+		size: "l",
 	},
 };

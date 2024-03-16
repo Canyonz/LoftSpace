@@ -46,12 +46,7 @@ export const AppImage = ({ src, maxHeight, alt = "image", signature, fallback, e
 	if (signature) {
 		return (
 			<div className={cls(styles.imgWrapper, className)}>
-				<img
-					src={src}
-					alt={alt}
-					className={cls(styles.appImage, { [styles.maxHeight]: maxHeight })}
-					draggable="false"
-				/>
+				<img src={src} alt={alt} className={cls(styles.appImage, { [styles.maxHeight]: maxHeight })} draggable="false" />
 				<span className={styles.signature}>{signature}</span>
 			</div>
 		);

@@ -1,8 +1,8 @@
-import { Input } from "./InputForm";
+import { InputForm } from "./InputForm";
 
 export default {
 	title: "shared/InputForm",
-	component: Input,
+	component: InputForm,
 	tags: ["autodocs"],
 };
 

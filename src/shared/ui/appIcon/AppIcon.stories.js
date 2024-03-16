@@ -36,5 +36,6 @@ export const Other = {
 	args: {
 		Svg: ArrowSVG,
 		color: "secondary",
+		clickable: true,
 	},
 };

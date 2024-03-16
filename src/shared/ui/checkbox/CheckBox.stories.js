@@ -7,5 +7,7 @@ export default {
 };
 
 export const CheckBoxLight = {
-	args: {},
+	args: {
+		label: "CheckBox",
+	},
 };

@@ -8,7 +8,7 @@ import { getRouteCatalog } from "@/shared/const/router";
 export const ArticleHeader = () => {
 	return (
 		<article className={styles.article}>
-			<AppImage src="/main/header.jpg" className={styles.img} />
+			<AppImage src="./main/header.jpg" className={styles.img} />
 
 			<div className={styles.contentWrapper}>
 				<div className={styles.contentSize}>

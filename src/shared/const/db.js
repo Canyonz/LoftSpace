@@ -1,12 +1,12 @@
 export const slider1Items = [
 	{
 		id: 1,
-		src: "/main/illustration1.jpg",
+		src: "./main/illustration1.jpg",
 		signature: "Гостиная",
 	},
 	{
 		id: 2,
-		src: "/main/illustration2.jpg",
+		src: "./main/illustration2.jpg",
 		signature: "Гостиная",
 	},
 ];
@@ -14,12 +14,12 @@ export const slider1Items = [
 export const slider2Items = [
 	{
 		id: 1,
-		src: "/main/illustration3.jpg",
+		src: "./main/illustration3.jpg",
 		signature: "Гостиная",
 	},
 	{
 		id: 2,
-		src: "/main/illustration4.jpg",
+		src: "./main/illustration4.jpg",
 		signature: "Гостиная",
 	},
 ];

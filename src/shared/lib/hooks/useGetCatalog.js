@@ -8,7 +8,7 @@ export const useGetCatalog = (props) => {
 
 	useEffect(() => {
 		$api
-			.get("/products", {
+			.get("/products/", {
 				params: props,
 			})
 			.then((res) => {
