@@ -25,4 +25,6 @@ Currently, two official plugins are available:
 
 Запросы на сервер отправляются с помощью Axios.
 
+## GH-PAGES
 
+Ссылка на gh-pages: https://canyonz.github.io/LoftSpace/
