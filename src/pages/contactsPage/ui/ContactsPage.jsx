@@ -48,7 +48,7 @@ export const ContactsPage = () => {
 					<span>При возникновении вопросов, оставьте заявку и мы свяжемся с вами.</span>
 					<div className={styles.form}>
 						<ApplicationForm />
-						<AppImage src="/contacts/psychologist.jpg" maxHeight />
+						<AppImage src="./contacts/psychologist.jpg" maxHeight />
 					</div>
 				</div>
 			</section>
